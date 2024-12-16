@@ -22,7 +22,7 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
+      "@/*": ["./src/*"],
       "@shared/*": ["shared/*"],
       "@widgets/*": ["widgets/*"],
       "@entities/*": ["entities/*"],

@@ -1,0 +1,22 @@
+.todo-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  align-items: center;
+  color: black;
+  border-radius: 8px;
+}
+
+.todo-item:hover {
+  background-color: #ccc;
+}
+
+.todo-label {
+  font-size: 18px;
+}
+
+.todo-label.done {
+  text-decoration: line-through;
+}

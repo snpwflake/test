@@ -3,3 +3,5 @@ export type Todo = {
   label: string;
   checked: boolean;
 }
+
+export type TodoTabs = 'all' | 'active' | 'completed';

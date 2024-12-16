@@ -1,0 +1,8 @@
+
+.todo-delete-button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

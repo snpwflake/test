@@ -1,0 +1,14 @@
+.todos-tabs-item {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.todos-tabs-item:hover {
+  outline: 1px solid #ac4848;
+}
+
+.todos-tabs-item.active{
+  outline: 1px solid #ac4848;
+}
