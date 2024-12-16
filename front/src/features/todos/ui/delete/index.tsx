@@ -13,7 +13,7 @@ export const TodoDelete: React.FC<TodoDeleteProps> = ({ todo }) => {
 
   const handleClick = useCallback(() => {
     deleteTodo(todo);
-  }, [todo])
+  }, [todo, deleteTodo])
 
   return (
     <button
