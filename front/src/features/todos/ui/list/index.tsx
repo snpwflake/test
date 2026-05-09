@@ -1,16 +1,16 @@
 import './styled.css';
 import { Todo } from "@/entities";
-import { TodosItem } from "../item";
+import { TodoItem } from "../item";
 
-type TodoListTypes = {
+type TodoListProps = {
   todos: Todo[];
 }
 
-export const TodosList: React.FC<TodoListTypes> = ({ todos }) => {
+export const TodoList: React.FC<TodoListProps> = ({ todos }) => {
   return (
     <ul className="todo-list">
       {todos.map((todo) => (
-        <TodosItem
+        <TodoItem
           key={todo.id}
           todo={todo}
         />
