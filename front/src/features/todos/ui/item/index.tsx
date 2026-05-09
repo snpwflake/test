@@ -1,31 +1,21 @@
 import './styled.css';
-import { Checkbox } from "@/shared";
 import { Todo, todosModel } from "@/entities";
-import { useUnit } from "effector-react";
-import { TodoDelete } from '../delete';
+import { Checkbox } from "@/shared";
+import { TodosDelete } from "../delete";
 
-type TodosItemProps = {
+type TodoItemProps = {
   todo: Todo;
-};
+}
 
-export const TodosItem: React.FC<TodosItemProps> = ({ todo }) => {
-  const updateTodo = useUnit(todosModel.updateTodo);
-
+export const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
   return (
-    <li
-      id={todo.id}
-      className="todo-item"
-    >
+    <li className={`todo-item ${todo.checked ? 'checked' : ''}`}>
       <Checkbox
-        id={todo.id}
-        name={todo.id}
         checked={todo.checked}
-        value={todo.id}
-        onChange={() => updateTodo(todo)}
+        onChange={() => todosModel.toggleTodo(todo.id)}
       />
-      <label htmlFor={todo.id} className={`todo-label ${todo.checked && 'done'}`}>{todo.label}</label>
-      <TodoDelete todo={todo} />
-      {/* <div className="todo-drag"></div> */}
+      <span className="todo-item-label">{todo.label}</span>
+      <TodosDelete id={todo.id} />
     </li>
-  )
+  );
 }
